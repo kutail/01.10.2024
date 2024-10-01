@@ -7,7 +7,7 @@ int main()
 {
     srand(time(NULL));
     const int size = 10;
-    int a = rand() % 1 + 10;
+    int a = rand() % 11;
     int vvod = 0;
     int random[size];
     int polsovatel[size];
