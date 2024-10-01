@@ -6,37 +6,35 @@ using namespace std;
 int main()
 {
     srand(time(NULL));
-    const int size = 2;
-    int a = rand() % 1 + 5;
-    int arr[size];
+    const int size = 10;
+    int a = rand() % 1 + 10;
+    int vvod = 0;
+    int random[size];
+    int polsovatel[size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = a;
+        random[i] = a;
     }
     for (int i = 0; i < size; i++)
     {
-        cout << "Введите любое лисло от 0 до 10\n";
-        int chislo = 0;
-        cin >> chislo;
-        if (chislo < 0 || chislo > 10)
+        cout << "Введите число: ";
+        cin >> vvod;
+        if (vvod < 0 || vvod > 10)
         {
             cout << "Число должно быть больше нуля и меньше десяти";
         }
         else
         {
-            if (arr[i] == chislo)
+            polsovatel[i] = vvod;
+            if ( random[i] == polsovatel[i])
             {
-                
-                cout << "Поздравляю, число угадано\n";
+                cout << "Угадал !\n";
             }
             else
             {
-                
-                cout << "НЕудача\n";
+                cout << "НЕ угадал(\n";
             }
         }
     }
-    
-    
     return 0;
 }
